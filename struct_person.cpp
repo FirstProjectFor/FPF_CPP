@@ -3,24 +3,43 @@
 
 using namespace std;
 
+// definition of showPersonInfo method
+void showPeronInfo(struct Person p);
+void showPeronInfoP(struct Person *p);
+
 struct Person
 {
     char name[20];
-    uint8_t age;
+    int age;
 };
 
 int main()
 {
-    Person p1;
-    Person p2;
+    Person p;
+    Person *pp = &p;
 
-    strcpy(p1.name, "p1");
-    p1.age = 10;
-    strcpy(p2.name, "p2");
-    p2.age = 10;
+    strcpy(p.name, "p");
+    p.age = 10;
 
-    cout << "P1:" << p1.name << p1.age << endl;
-    cout << "P2:" << p2.name << p2.age << endl;
+    cout << "before showPeronInfo, p address is: " << pp << endl;
+    showPeronInfo(p);
+
+    cout << "before showPeronInfoP, pp address is: " << &pp << endl;
+    showPeronInfoP(pp);
 
     return 0;
+}
+
+// implement of showPersonInfo method
+void showPeronInfo(struct Person p)
+{
+    cout << "in showPeronInfo, p address is:" << &p << endl;
+    cout << "Name: " << p.name << " Age: " << p.age << endl;
+}
+
+// implement of showPersonInfo method
+void showPeronInfoP(struct Person *p)
+{
+    cout << "in showPeronInfoP, pp address is: " << &p << endl;
+    cout << "Name: " << p->name << " Age: " << p->age << endl;
 }
