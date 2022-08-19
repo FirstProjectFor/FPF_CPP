@@ -1,4 +1,12 @@
 *
 
 !*.cpp
+!*.h
 !temp_data.txt
+
+
+!person/
+!person/*.cpp
+!person/*.h
+
+!.gitignore
