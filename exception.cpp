@@ -2,17 +2,12 @@
 
 using namespace std;
 
-int main()
-{
+int main() {
+  try {
+    throw "Test Exception";
+  } catch (const char* msg) {
+    cout << msg << endl;
+  }
 
-    try
-    {
-        throw "Test Exception";
-    }
-    catch (const char *msg)
-    {
-        cout << msg << endl;
-    }
-
-    return 0;
+  return 0;
 }

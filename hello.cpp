@@ -2,7 +2,4 @@
 
 using namespace std;
 
-int main()
-{
-    cerr << "Hello C++" << endl;
-}
+int main() { cerr << "Hello C++" << endl; }
