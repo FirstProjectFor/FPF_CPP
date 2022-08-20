@@ -4,6 +4,7 @@ using namespace std;
 
 class Shape {
  public:
+  //virtual 声明虚函数实现该接口的类需要实现该函数
   virtual int getArea() = 0;
 };
 

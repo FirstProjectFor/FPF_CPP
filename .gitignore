@@ -9,5 +9,11 @@
 !person/*.cpp
 !person/*.h
 
+!include/
+!include/**
+
+!lib/
+!lib/**
+
 # format
 !.clang-format
