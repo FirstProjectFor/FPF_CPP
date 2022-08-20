@@ -8,3 +8,6 @@
 !person/
 !person/*.cpp
 !person/*.h
+
+# format
+!.clang-format
